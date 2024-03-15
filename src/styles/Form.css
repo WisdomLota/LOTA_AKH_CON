@@ -125,3 +125,39 @@ p {
   text-align: center;
   font-weight: 500;
 }
+
+#security-question option {
+    color: #822e27;
+}
+
+#terms-conditions {
+    margin-left: 12px;
+}
+
+
+.accept-terms input{
+    display: none;
+}
+
+.accept-terms .check-mark {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #822e27;
+    margin-top: 24px;
+}
+
+.accept-terms input:checked +.check-mark {
+    background-color: #822e27;
+}
+
+.accept-terms .terms-text {
+    font-size: 16px;
+    color: #822e27;
+    float: right;
+    margin-right: 164px;
+}
+
+.terms-text b{
+    color: #6CA2E3;
+}
