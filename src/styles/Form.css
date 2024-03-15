@@ -87,5 +87,33 @@ button:hover {
 }
 
 p {
-    font-weight: bold;
+    font-weight: light;
+}
+
+.identification {
+    display: none;
+}
+
+.custom-id-image {
+    display: inline-block;
+    padding: 16px 12px;
+    background-color: #fbfbfb;
+    color: #822e27;
+    border: 1px solid #822e27;
+    cursor: pointer;
+    width: 100%;
+}
+
+.upload-symbol {
+    font-size: 32px;
+    margin-left: 50%;
+}
+
+.upload-text {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #822e27;
+  text-align: center;
+  font-weight: 500;
 }

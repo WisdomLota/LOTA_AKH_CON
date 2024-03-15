@@ -8,17 +8,7 @@ import AKHDesign from "../assets/AKH-Design.png";
 function SignUpFormB() {
 
     const schema = yup.object().shape({
-        lastName: yup.string("Name must contain letters").required("Please enter your Last Name"),
-        firstName: yup.string('Name must contain letters').required("Please enter your First Name"),
-        emailAddress: yup.string()
-        .required(" Please enter your email address")
-        .email("Please enter a valid email"),
-        mobileNumber: yup.string()
-        .required('Please enter your mobile number')
-        .matches(/^\d{11}$/, 'Mobile number must be exactly 11 digits'),
-        dateOfBirth: yup.string().required(" Please enter your Date of Birth"),
-        gender: yup.string().required("Please select your gender"),
-        address: yup.string().required("Please enter your address").min(15),
+        passportNumber: yup.string().required("Please enter your Passport Number"),
     });
 
     const  { register, handleSubmit, formState: {errors} } = useForm({
@@ -38,47 +28,53 @@ function SignUpFormB() {
         <div class="akh-form">
             <form id="registration-form" onSubmit = {handleSubmit(onSubmit)}>
                 <div className="form-group">
-                    <label for="last-name">Last Name: </label>
-                    <input type="text" name="last-name" id="last-name" placeholder="Doe" {...register('lastName')}/>
-                    <p>{errors.lastName?.message}</p>
+                    <label for="passport-num">Passport Number: </label>
+                    <input type="text" name="passport-num" id="passport-num" placeholder="B87908852"  {...register('passportNumber')}/>
+                    <p>{errors.passportNumber?.message}</p>
                 </div>
-                <div className="form-group">
-                    <label for="first-name">First Name: </label>
-                    <input type="text" name="first-name" id="first-name" placeholder="John"  {...register('firstName')}/>
-                    <p>{errors.firstName?.message}</p>
+                <div class="form-group">
+                    <label for="proof-of-residence">ID Card Image: </label>
+                    <div class="id-talk">
+                        <div class="image-symbol">
+                        <input type="file" class="identification" name="proof-of-residence" accept="image*/"/><br/>
+                            <label for="proof-of-residence" class="custom-id-image">
+                                <span class="upload-symbol">&#8686;</span>
+                                <span class="upload-text">Upload the image of a valid ID Card (this can<br/> be a passport, drivers license, NIN, National ID card)</span>
+                                <span class="upload-text"><b>Maximum size of 2MB</b></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-                <div className="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" name="email" id="email" placeholder="johndoe@gmail.com"  {...register('emailAddress')}/>
-                    <p>{errors.emailAddress?.message}</p>
+                <div class="form-group">
+                    <label for="id-image">Proof of Residence: </label>
+                    <div class="id-talk">
+                        <div class="image-symbol">
+                        <input type="file" class="identification" name="id-image" accept="image*/"/><br/>
+                            <label for="id-image" class="custom-id-image">
+                                <span class="upload-symbol">&#8686;</span>
+                                <span class="upload-text">Upload proof of residence(this can<br/> be water bill, electricity bill or any document or image with your address)</span>
+                                <span class="upload-text"><b>Maximum size of 2MB</b></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-                <div className="form-group">
-                    <label for="phone">Mobile Number</label>
-                    <input type="tel" name="phone" id="phone" placeholder="091987652233"  {...register('mobileNumber')}/>
-                    <p>{errors.mobileNumber?.message}</p>
-                </div>
-                <div className="form-group">
-                    <label for="dob">Date of Birth: </label>
-                    <input type="date" name="dob" id="dob"    {...register('dateOfBirth')}/>
-                    <p>{errors.dateOfBirth?.message}</p>
-                </div>
-                <div className="form-group">
-                    <label for="gender">Gender </label>
-                    <select name="gender" id="gender"    {...register('gender')}>
-                        <option value="">Gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
-                    <p>{errors.gender?.message}</p>
-                </div>
-                <div className="form-group">
-                    <label for="address">Residential Address: </label>
-                    <textarea name="address" id="address" cols="30" rows="5"    {...register('address')} />
-                    <p>{errors.address?.message}</p>
+                <div class="form-group">
+                    <label for="signature-img">Signature Image: </label>
+                    <div class="id-talk">
+                        <div class="image-symbol">
+                        <input type="file" class="identification" name="signature-img" accept="image*/"/><br/>
+                            <label for="signature-img" class="custom-id-image">
+                                <span class="upload-symbol">&#8686;</span>
+                                <span class="upload-text">Upload a handwritten image of your signature</span>
+                                <span class="upload-text"><b>Maximum size of 2MB</b></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
                 <div className="form-group">
                 <button type='submit'>NEXT</button>
                 </div>
+                
             </form>
         </div>
     </div>
