@@ -9,6 +9,24 @@ function SignUpFormB() {
 
     const schema = yup.object().shape({
         passportNumber: yup.string().required("Please enter your Passport Number"),
+        idCardImg: yup
+        .mixed()
+        .test('is-valid-document', 'Please upload your ID', (value) => {
+          // Custom validation logic to check if a document is selected
+          return !!value?.length;
+        }),
+        proofOfResidence: yup
+        .mixed()
+        .test('is-valid-document', 'Please upload your Proof of Residence', (value) => {
+          // Custom validation logic to check if a document is selected
+          return !!value?.length;
+        }),
+        signatureImg: yup
+        .mixed()
+        .test('is-valid-document', 'Please upload the Image of your Signature', (value) => {
+          // Custom validation logic to check if a document is selected
+          return !!value?.length;
+        }), 
     });
 
     const  { register, handleSubmit, formState: {errors} } = useForm({
@@ -32,45 +50,55 @@ function SignUpFormB() {
                     <input type="text" name="passport-num" id="passport-num" placeholder="B87908852"  {...register('passportNumber')}/>
                     <p>{errors.passportNumber?.message}</p>
                 </div>
+
+                
                 <div class="form-group">
-                    <label for="proof-of-residence">ID Card Image: </label>
-                    <div class="id-talk">
+                    <label for="id-image">ID Card Image: </label>
+                    <div>
                         <div class="image-symbol">
-                        <input type="file" class="identification" name="proof-of-residence" accept="image*/"/><br/>
-                            <label for="proof-of-residence" class="custom-id-image">
+                            <input type="file" id="id-image" name="id-image" accept="image*/" {...register('idCardImg')}/><br/>
+                            <label for="id-image" class="custom-id-image">
                                 <span class="upload-symbol">&#8686;</span>
                                 <span class="upload-text">Upload the image of a valid ID Card (this can<br/> be a passport, drivers license, NIN, National ID card)</span>
                                 <span class="upload-text"><b>Maximum size of 2MB</b></span>
-                            </label>
-                        </div>
+                            </label>         
                     </div>
                 </div>
+                    <p>{errors.idCardImg?.message}</p>
+                </div>
+
                 <div class="form-group">
-                    <label for="id-image">Proof of Residence: </label>
-                    <div class="id-talk">
+                    <label for="POR">Proof of Residence: </label>
+                    <div>
                         <div class="image-symbol">
-                        <input type="file" class="identification" name="id-image" accept="image*/"/><br/>
-                            <label for="id-image" class="custom-id-image">
+                            <input type="file" id="POR" name="POR" accept="image*/" {...register('proofOfResidence')}/><br/>
+                            <label for="POR" class="custom-id-image">
                                 <span class="upload-symbol">&#8686;</span>
-                                <span class="upload-text">Upload proof of residence(this can<br/> be water bill, electricity bill or any document or image with your address)</span>
+                                <span class="upload-text">Upload proof of residence (this can<br/> be water bill, electricity bill or any other document or image with your address)</span>
                                 <span class="upload-text"><b>Maximum size of 2MB</b></span>
-                            </label>
-                        </div>
+                            </label>         
                     </div>
                 </div>
+                    <p>{errors.proofOfResidence?.message}</p>
+                </div>
+
                 <div class="form-group">
-                    <label for="signature-img">Signature Image: </label>
-                    <div class="id-talk">
+                    <label for="signature">Signature Image: </label>
+                    <div>
                         <div class="image-symbol">
-                        <input type="file" class="identification" name="signature-img" accept="image*/"/><br/>
-                            <label for="signature-img" class="custom-id-image">
+                            <input type="file" id="signature" name="signature" accept="image*/" {...register('signatureImg')}/><br/>
+                            <label for="signature" class="custom-id-image">
                                 <span class="upload-symbol">&#8686;</span>
-                                <span class="upload-text">Upload a handwritten image of your signature</span>
+                                <span class="upload-text">Upload a handwritten image of your signature </span>
                                 <span class="upload-text"><b>Maximum size of 2MB</b></span>
-                            </label>
-                        </div>
+                            </label>         
                     </div>
                 </div>
+                    <p>{errors.signatureImg?.message}</p>
+                </div>
+                
+
+                
                 <div className="form-group">
                 <button type='submit'>NEXT</button>
                 </div>
