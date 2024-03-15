@@ -5,7 +5,7 @@ import {yupResolver} from "@hookform/resolvers/yup";
 import "../styles/Form.css";
 import AKHDesign from "../assets/AKH-Design.png";
 
-function SignUpFormA() {
+function SignUpFormB() {
 
     const schema = yup.object().shape({
         lastName: yup.string("Name must contain letters").required("Please enter your Last Name"),
@@ -86,4 +86,4 @@ function SignUpFormA() {
      )
 }
  
-export default SignUpFormA;
+export default SignUpFormB;
