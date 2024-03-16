@@ -32,6 +32,9 @@ function SignUpFormA() {
     return ( 
         <>
         <div class="whole">
+        <div className="form-header">
+            <h2>SIGN UP</h2>
+        </div>
         <div class="akh-img">
             <img src={AKHDesign} alt="AKH-Design" />
         </div>
@@ -39,22 +42,22 @@ function SignUpFormA() {
             <form id="registration-form" onSubmit = {handleSubmit(onSubmit)}>
                 <div className="form-group">
                     <label for="last-name">Last Name: </label>
-                    <input type="text" name="last-name" id="last-name" placeholder="Doe" {...register('lastName')}/>
+                    <input type="text" name="last-name" id="last-name"  {...register('lastName')}/>
                     <p>{errors.lastName?.message}</p>
                 </div>
                 <div className="form-group">
                     <label for="first-name">First Name: </label>
-                    <input type="text" name="first-name" id="first-name" placeholder="John"  {...register('firstName')}/>
+                    <input type="text" name="first-name" id="first-name"   {...register('firstName')}/>
                     <p>{errors.firstName?.message}</p>
                 </div>
                 <div className="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" name="email" id="email" placeholder="johndoe@gmail.com"  {...register('emailAddress')}/>
+                    <input type="email" name="email" id="email" {...register('emailAddress')}/>
                     <p>{errors.emailAddress?.message}</p>
                 </div>
                 <div className="form-group">
                     <label for="phone">Mobile Number</label>
-                    <input type="tel" name="phone" id="phone" placeholder="091987652233"  {...register('mobileNumber')}/>
+                    <input type="tel" name="phone" id="phone"   {...register('mobileNumber')}/>
                     <p>{errors.mobileNumber?.message}</p>
                 </div>
                 <div className="form-group">

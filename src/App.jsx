@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import './styles/general.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScheduleTour from "./pages/ScheduleTour";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/contact' element={<Contact />}/>
         <Route path='/signup' element={<SignUp />}/>
         <Route path='/login' element={<Login />}/>
+        <Route path='/schedule-tour' element={<ScheduleTour />}/>
       </Routes>
     <Footer />
     </Router>

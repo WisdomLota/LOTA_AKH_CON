@@ -10,6 +10,12 @@ body {
     margin: 12px auto;
 }
 
+.form-header {
+    font-size: 20px;
+    color: #822e27;
+    margin: 120px 8px 24px 8px;
+}
+
 .akh-img {
     background: linear-gradient(#6c9ce300, #6c96e31a), url('../assets/explorePic.png');
     text-align: center;
@@ -52,6 +58,7 @@ input[type="email"],
 input[type="tel"],
 input[type="number"],
 input[type="password"],
+input[type="time"],
 textarea,
 select {
   width: 100%;
@@ -131,7 +138,7 @@ p {
 }
 
 #terms-conditions {
-    margin-left: 12px;
+    margin-left: 8px;
 }
 
 
@@ -155,7 +162,9 @@ p {
     font-size: 16px;
     color: #822e27;
     float: right;
-    margin-right: 164px;
+    margin-left: 36px;
+    margin-top: -32px;
+    margin-bottom: 32px;
 }
 
 .terms-text b{

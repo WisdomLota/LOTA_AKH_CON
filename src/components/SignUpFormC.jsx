@@ -31,6 +31,9 @@ function SignUpFormC() {
     return ( 
         <>
         <div class="whole">
+        <div className="form-header">
+            <h2>SIGN UP</h2>
+        </div>
         <div class="akh-img">
             <img src={AKHDesign} alt="AKH-Design" />
         </div>
