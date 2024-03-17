@@ -5,10 +5,11 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
+import ScheduleTour from "./pages/ScheduleTour";
 import './styles/general.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import ScheduleTour from "./pages/ScheduleTour";
+import PaymentPage from "./pages/PaymentPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/signup' element={<SignUp />}/>
         <Route path='/login' element={<Login />}/>
         <Route path='/schedule-tour' element={<ScheduleTour />}/>
+        <Route path='/payments' element={<PaymentPage />}/>
       </Routes>
     <Footer />
     </Router>
