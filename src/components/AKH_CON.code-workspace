@@ -1,11 +1,16 @@
 {
-	"folders": [
-		{
-			"path": "../.."
-		},
-		{
-			"path": "../../../../Anime-lota/frontEndDevTrials/React-Creations/Develop"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "../.."
+    },
+    {
+      "path": "../../../../Anime-lota/frontEndDevTrials/React-Creations/Develop"
+    },
+    {
+      "path": "../../../../LotaAKHLaptopVersion"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "LotaAKHLaptopVersion"
+  }
 }

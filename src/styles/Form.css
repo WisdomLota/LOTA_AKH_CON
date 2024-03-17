@@ -68,15 +68,15 @@ select {
   color: #822e27;
 }
 
-input[type="email"]::placeholder,
+/* input[type="email"]::placeholder,
 input[type="text"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="number"]::placeholder,
 input[type="password"]::placeholder {
     color: #822e27;
-}
+} */
 
-button {
+/* button {
     float: right;
     padding: 8px 32px;
     margin-right: -20px;
@@ -91,7 +91,7 @@ button {
 button:hover {
     color: #fbfbfb;
     background-color: #6CA2E3;
-}
+} */
 
 p {
     font-weight: light;
@@ -170,3 +170,29 @@ p {
 .terms-text b{
     color: #6CA2E3;
 }
+
+.btns {
+    /* text-align: center; */
+    margin: 12px 0px;
+    /* justify-content: space-between; */
+    width: 100%;
+    
+}
+
+.btns button {
+    width: 45%;
+    color: #6CA2E3;
+    margin-left: 44px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 200px;
+    border: 2px solid #6CA2E3;
+    background-color: #fbfbfb;
+}
+
+.btns button:hover {
+    color: #fbfbfb;
+    background-color: #6CA2E3;
+}
+
+

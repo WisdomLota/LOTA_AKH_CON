@@ -10,6 +10,7 @@ import './styles/general.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PaymentPage from "./pages/PaymentPage";
+import EditProfile from "./pages/EditProfile";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/login' element={<Login />}/>
         <Route path='/schedule-tour' element={<ScheduleTour />}/>
         <Route path='/payments' element={<PaymentPage />}/>
+        <Route path='/edit-profile' element={<EditProfile />}/>
       </Routes>
     <Footer />
     </Router>

@@ -30,11 +30,11 @@
     margin: 0 16px;
 }
 
-.btns {
+.navbtns {
     padding-right: 56px;
 }
 
-.btns button:first-child {
+.navbtns button:first-child {
     color: #fbfbfb;
     font-weight: 500;
     background-color: #6CA2E3;
@@ -43,7 +43,7 @@
     border-radius: 0;
 }
 
-.btns button:last-child {
+.navbtns button:last-child {
     color: #6CA2E3;
     font-weight: 500;
     background-color: #fbfbfb;
